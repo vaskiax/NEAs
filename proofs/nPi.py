@@ -38,4 +38,4 @@ def nPi()-> None:
                 Similarly, for the less common case where the asteroid's afelion distance is less than the Earth's afelion distance, the inequality is reversed, leading to the condition: $Q_{NEA} > q_{E}$. Hence, arriving at the relations that must be met.
                 """
 
-    display(Markdown(full_text))
+    return(Markdown(full_text))
