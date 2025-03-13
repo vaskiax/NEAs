@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 class Canvas:
-    def __init__(self, width=10, height=10):
-        self.fig, self.ax = plt.subplots(figsize=(width, height))
+    def __init__(self):
+        self.fig, self.ax = plt.subplots()
         self.ax.set_aspect('equal')
         plt.xlabel('$a$ (AU)')
         plt.ylabel('$e$ (eccentricity)')
@@ -16,13 +16,14 @@ class Canvas:
     def save(self, filename):
         self.fig.savefig(filename)
 
-    def plot(self, x, y, label=None, real_data = False):
+    def plot(self, x, y, label=None, real_data = False, color='black'):
+
         if not real_data:
             self.ax.plot(x, y, label=label, linestyle='--', linewidth=1)
             if label:
                 plt.legend(loc='best')
         else:
-            self.ax.plot(x, y, marker='o', markersize=2, c='black')
+            self.ax.plot(x, y, marker='o', markersize=2, c=color)
 
     def fill(self, bounds: tuple[float, float], bounds_names: tuple[str, str], x_range: np.ndarray, colors:tuple[str, str], color_fill='gray', alpha=0.3):
         """
@@ -48,3 +49,4 @@ class Canvas:
         plt.ylim(-0.03, 1)
         plt.xlim(min(x_range), max(x_range))        
         plt.legend(loc='best')
+        
