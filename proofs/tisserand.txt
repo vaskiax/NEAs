@@ -1,0 +1,53 @@
+So, it is needed to get to an expression of the eccentricity of asteroids parameterized by
+inclination (i) equals zero, and constant Tisserand parameter. Hence, coplanar with the solar 
+system invariant plane asteroids with a given Tisserand constant.
+
+$$
+e = \sqrt{1 - \frac{1}{4 \bar{a}^3 \cos^2 i} (T \bar{a} - 1)^2}
+$$
+
+The Tisserand parameter for the Sun-Earth system is:
+
+$$
+T = \frac{1}{\bar{a}} + 2 \cos i \sqrt{\frac{\bar{a}}{1 - e^2}}
+$$
+
+where \(\bar{a} = \frac{a}{a_\oplus}\) corresponds to the semi-major axis relative to Earth's orbit, \(e\) is the eccentricity, and \(i\) is the orbital inclination. Taking \(i = 0\), the expression simplifies to:
+
+$$
+T = \frac{1}{\bar{a}} + 2 \sqrt{\frac{\bar{a}}{1 - e^2}}
+$$
+
+Reversing the equation to get the expression for the eccentricity values, and simplifying:
+
+$$
+T - \frac{1}{\bar{a}} = 2 \sqrt{\frac{\bar{a}}{1 - e^2}}
+$$
+
+
+$$
+\frac{T \bar{a} - 1}{2} = \sqrt{\frac{\bar{a}^3}{1 - e^2}}
+$$
+
+
+$$
+\left(\frac{T \bar{a} - 1}{2}\right)^2 = \frac{\bar{a}^3}{1 - e^2}
+$$
+
+Inverting the right-hand side:
+
+$$
+1 - e^2 = \frac{4 \bar{a}^3}{(T \bar{a} - 1)^2}
+$$
+
+Solving for \(e\), we get:
+
+$$
+e^2 = 1 - \frac{4 \bar{a}^3}{(T \bar{a} - 1)^2}
+$$
+
+$$
+e = \sqrt{1 - \frac{1}{4 \bar{a}^3} (T \bar{a} - 1)^2}
+$$
+
+Hence, arriving to the expression for the special case of $i = 0$
